@@ -18,6 +18,12 @@ const personagens = [
     imagem: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
     especie: "Human",
     vida: "Alive"
+  },
+  {
+    nome: "One More",
+    imagem: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+    especie: "Human",
+    vida: "Alive"
   }
 ];
 
