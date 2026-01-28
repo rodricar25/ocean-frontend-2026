@@ -1,22 +1,52 @@
-export function Personagem({
-  nome
-} ) {
-    return {
-      <div className="personagem">
-          <img 
-            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" 
-          />
-        <div className="detalhes">
-          <p className="nome">
-            Rick Sanchez
-          </p>
-          <p className="especie">
-            Human
-          </p>
-          <span className="vida">
-            Alive
-          </span>
-        </div>
+import { Personagem } from "./components/personagem";
+import { Titulo } from "./components/titulo";
+
+const personagens = [
+  {
+    nome: "Rick Sanchez",
+    imagem: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    especie: "Human",
+    vida: "Alive"
+  },
+  {
+    nome: "Morty Smith",
+    imagem: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    especie: "Human",
+    vida: "Alive"
+  },
+  {
+    nome: "Summer Smith",
+    imagem: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+    especie: "Human",
+    vida: "Alive"
+  }
+];
+
+export function Personagens() {
+  return (
+    <>
+      <Titulo />
+      <div className="personagens">
+        {
+          // Aqui percorremos a lista de personagems
+          personagens.map((
+            personagem
+            // Aqui eu acesso a variavel que corresponde
+            // ao item da lista que estou percorrendo
+          ) => {
+            return (
+              // Retorno o componente do meu personagem
+              // com os dados do personagem
+              <Personagem 
+                nome={personagem.nome}
+                imagem={personagem.imagem}
+                especie={personagem.especie}
+                vida={personagem.vida}
+              />
+            )
+          })
+        }
       </div>
-    }
+    </>
+  );
 }
