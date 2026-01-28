@@ -1,3 +1,5 @@
+import { Personagem } from "./components/personagem";
+
 export function Welcome() {
   return (
     <>
